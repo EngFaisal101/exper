@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية ود الخيرية</title>
+    
+    <!-- All CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+Hanunoo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<style>
+.swiper-button-prev:after,.swiper-button-next:after{
+  color: white;
+  background-color:#DDEB9D;
+  border-radius:50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  font-size:2rem;
+  }
+
+.services-main{
+display:none;
+}
+
+
+/*after nav the div request name*/
+.flex-container {
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items: stretch;
+  gap:10px 15px 20px;
+  flex-wrap: wrap;
+}
+
+/*span in content request name*/
+.flex-container > .content >span {
+font-size: 2rem;
+}
+
+
+/*content div request name*/
+.flex-container > .content {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  width: 200px;
+  border-radius:0.5rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  transition: .5s;
+  line-height: 40px;
+  margin:10px 10px 15px;
+  color:black;
+padding:7px;
+}
+
+
+
+@media screen and (max-width:1000px){
+#flex-media{
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+
+@media screen and (max-width:1000px){
+.flex-container > .content {
+width: 200px;
+}
+}
+
+@media screen and (max-width:450px){
+.flex-container > .content {
+ width: 130px;
+ line-height: 15px;
+}
+}
+.req{
+display: none;
+}
+
+ /* تحسين تنسيق النصوص */
+ #hero h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color:#A27B5C;
+  }
+  #hero p {
+    color: #5f6368;
+    line-height: 1.6;
+  }
+
+  /* أزرار أكثر وضوحاً */
+  .btn-get-started {
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    color:white;
+    text-decoration: none;
+    background-color:#A27B5C;
+     padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius:20px;
+  }
+
+  .btn-get-started:hover {
+    background-color: #2c4f6f;
+    color:white;
+  }
+
+  /* تحسين الصور في السلايدر */
+  .hero-carousel-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* لضمان أن الصور تغطي كامل العنصر دون تشويه */
+    filter: brightness(1.2); /* زيادة سطوع الصورة لتكون أكثر وضوحاً */
+  }
+
+  /* تخصيص العرض في الشاشات الصغيرة */
+  @media (max-width: 767px) {
+    #hero h2 {
+      font-size: 1.6rem;
+    }
+
+    .btn-get-started {
+      font-size: 1rem;
+    }
+
+    .carousel-inner {
+      border-radius: 20px;
+    }
+  }
+
+  /* إضافة تنسيق للـ Hero Section */
+  .hero {
+    min-height: 60vh; /* الحد الأدنى للارتفاع */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0; /* إضافة بعض التباعد العلوي والسفلي */
+    
+  }
+
+ 
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color:#3A6B92;
+  }
+
+
+.card-img-top{
+    border-radius: 50px;
+    padding: 20px;
+}
+.card{
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.card-body{
+    padding: 25px;
+    margin-top: -15px;
+}
+.btn-primary{
+    border-radius: 50px;
+    width: 120px;
+    background-color:#DDEB9D;
+    border-color:#DDEB9D;
+}
+.btn-primary:hover{
+    background-color:#2c4f6f;
+    border: none;
+}
+h3,h5{
+  color:#DDEB9D;
+}
+
+ /* تنسيق الخطوط والدائرة */
+ .line-with-circle {
+    position: relative;
+    flex: 1;
+    height: 2px;
+    background-color: #DDEB9D; /* يمكنك تغيير اللون حسب الرغبة */
+  }
+  
+  .line-with-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px; /* هذا المسافة بين الخط والدائرة */
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #DDEB9D; /* لون الدائرة */
+    border-radius: 50%;
+  }
+  
+  /* جعل العنوان يتوسط الشكل بشكل جيد */
+  .section-padding h1 {
+    font-size: 2rem;
+  }
+
+  /* اللون الافتراضي للزر */
+.btn_ser {
+    padding: 10px;
+    text-decoration: none;
+    background-color: #28a745; /* اللون الافتراضي */
+    color: white;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* اللون عند التمرير (هوفر) */
+.btn_ser:hover {
+    background-color: #218838; /* لون مختلف عند التمرير */
+}
+
+/* اللون عند الضغط (نشط) */
+.btn_ser.active {
+    background-color: #DDEB9D; /* اللون عند الضغط */
+    border-color: #DDEB9D;
+}
+
+.collapsible {
+  background-color:white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 15px;
+  margin-top:5px;
+}
+
+.active, .collapsible:hover {
+  background-color:ghostwhite;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color:white;
+}
+.navbar-nav .nav-link:hover {
+    color: #DDEB9D !important; /* تغيير لون النص عند التمرير */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #DDEB9D !important; /* تغيير لون النص عند تحديد العنصر */
+}
+   /* CSS لتمكين الـ sub-dropdown باستخدام hover */
+   .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+            /* تخصيص تصميم النافذة المنبثقة */
+            .modal-content {
+            border-radius: 20px;
+            padding: 30px;
+            background-color: #A27B5C;
+            color: white;
+        }
+
+        .modal-header {
+            border-bottom: 2px solid #DDEB9D;
+        }
+
+        .btn-custom {
+            background-color: #DDEB9D;
+            color: #A27B5C;
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        .btn-custom:hover {
+            background-color: #A27B5C;
+            color: white;
+        }
+
+        .modal-body {
+            text-align: right;
+        }
+
+        .modal-body h5 {
+            color: #DDEB9D;
+        }
+</style>
+</head>
+<body>
+  <!-- النافذة المنبثقة (Modal) -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">مرحبا بكم في جمعية ود</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="btn-group" role="group" aria-label="Basic example" dir="rtl">
+                    <button type="button" class="btn btn-custom" id="btn-main">رئيسة الجمعية</button>
+                    <button type="button" class="btn btn-custom" id="btn-about">عن الجمعية</button>
+                    <button type="button" class="btn btn-custom" id="btn-message">الرسالة</button>
+                    <button type="button" class="btn btn-custom" id="btn-goals">الأهداف</button>
+                </div>
+                <div id="content" class="mt-4" dir="rtl">
+                    <!-- المحتوى سيظهر هنا بناءً على الزر الذي تم الضغط عليه -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#A27B5C;">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="color:white;"><span style="color:#DDEB9D;">جمعية</span>&nbsp;ود</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" dir="rtl">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="">الرئيسية</a>
+                </li>
+                <!-- Dropdown More Button -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        عن ود
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown1">
+                        <li><a class="dropdown-item" href="#">عن الشركة</a></li>
+                        <li><a class="dropdown-item" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="dropdown-item" href="#">شروط الاستخدام</a></li>
+                        <li><a class="dropdown-item" href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown More Button -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        الحوكمة والشفافية
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#">عن الشركة</a></li>
+                        <li><a class="dropdown-item" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="dropdown-item" href="#">شروط الاستخدام</a></li>
+                        <li><a class="dropdown-item" href="#">الأسئلة الشائعة</a></li>
+                         <!-- Sub-dropdown داخل العنصر -->
+                         <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">خيارات </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">الخيار 1</a></li>
+                              <li><a class="dropdown-item" href="#">الخيار 2</a></li>
+                              <li><a class="dropdown-item" href="#">الخيار 3</a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown More Button -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        الخدمات الالكترونية
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown3">
+                        <li><a class="dropdown-item" href="#">عن الشركة</a></li>
+                        <li><a class="dropdown-item" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="dropdown-item" href="#">شروط الاستخدام</a></li>
+                        <li><a class="dropdown-item" href="#">الأسئلة الشائعة</a></li>
+                         <!-- Sub-dropdown داخل العنصر -->
+                         <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">خيارات إضافية</a>
+                          <ul class="dropdown-menu text-end">
+                              <li><a class="dropdown-item" href="#">الخيار 1</a></li>
+                              <li><a class="dropdown-item" href="#">الخيار 2</a></li>
+                              <li><a class="dropdown-item" href="#">الخيار 3</a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown More Button -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        البرامج والمشاريع
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown4">
+                        <li><a class="dropdown-item" href="#">عن الشركة</a></li>
+                        <li><a class="dropdown-item" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="dropdown-item" href="#">شروط الاستخدام</a></li>
+                        <li><a class="dropdown-item" href="#">الأسئلة الشائعة</a></li>
+                         <!-- Sub-dropdown داخل العنصر -->
+                         <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">خيارات إضافية</a>
+                          <ul class="dropdown-menu text-end">
+                              <li><a class="dropdown-item" href="#">الخيار 1</a></li>
+                              <li><a class="dropdown-item" href="#">الخيار 2</a></li>
+                              <li><a class="dropdown-item" href="#">الخيار 3</a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown More Button -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        الاعلام
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown5">
+                        <li><a class="dropdown-item" href="#">عن الشركة</a></li>
+                        <li><a class="dropdown-item" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="dropdown-item" href="#">شروط الاستخدام</a></li>
+                        <li><a class="dropdown-item" href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown More Button -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        تواصل معنا
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">عن الشركة</a></li>
+                        <li><a class="dropdown-item" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="dropdown-item" href="#">شروط الاستخدام</a></li>
+                        <li><a class="dropdown-item" href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </li>
+
+                <!-- إضافة زر البحث -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" id="searchButton">
+                        <i class="bi bi-search"></i> <!-- أيقونة البحث من Bootstrap Icons -->
+                    </a>
+                </li>
+
+                <!-- حقل البحث (مخفي بشكل افتراضي) -->
+                <li class="nav-item" id="searchContainer" style="display: none;">
+                    <input class="form-control" type="search" placeholder="ابحث هنا..." aria-label="Search">
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+         
+         
+         
+<!-- ======= Hero Section ======= -->
+<div class="hero-wrapper" style="background-color: #DDEB9D;padding-top:150px;">
+<section id="hero" class="hero"  dir="rtl"> <!-- أضف هذا السطر لتحديد المسافة تحت الشريط العلوي -->
+  <div class="container position-relative">
+    <div class="row gy-5" data-aos="fade-in">
+
+      <div class="col-lg-6 order-2 order-lg-1 justify-content-center text-center text-lg-end">
+        <h2>جــــمعية ود الخيرية</h2>
+        <p class="font-italic" style="color: #A27B5C;">ود جمعية خيرية ذات شخصية اعتبارية مستقلة تعنى بشؤون الأسرة تأسست بتاريخ 1431/1/24هـ وتصريح رقم (548)، يرأسها فخرياً صاحب السمو الملكي الأمير سعود بن نايف بن عبدالعزيز آل سعود أمير المنطقة الشرقية، تهتم بالأحياء محدودة الدخل بالخبر من خلال تنفيذ برامج تنموية وتكافلية.</p>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+          <a href="#nn" class="btn-get-started">اكتشف المزيد</a>
+        </div>
+      </div>
+
+      <!-- Carousel for Images --> 
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <!-- Carousel Inner -->
+          <div class="carousel-inner" id="carousel-inner" style="border-radius: 40px; overflow: hidden;">
+            <!-- First Carousel Item -->
+            <div class="carousel-item active">
+              <img src="img/wud_new.png" class="d-block w-100 hero-carousel-img" alt="Image description">
+            </div>
+            <!-- Additional Images -->
+            <div class="carousel-item">
+              <img src="img/pic_13.jpg" class="d-block w-100 hero-carousel-img" alt="Another image description">
+            </div>
+            <div class="carousel-item">
+              <img src="img/pic_12.jpg" class="d-block w-100 hero-carousel-img" alt="Another image description">
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+</div>
+  <!-- End Hero Section -->
+<!-- about section Ends -->
+<!-- services section Starts -->
+<section class="section-padding" dir="rtl">
+<div class="container py-5">
+  <div class="d-flex align-items-center mb-4 justify-content-center">
+    <!-- خط من اليسار مع دائرة -->
+    <div class="line-with-circle"></div>
+
+    <h1 class="text-center mx-4">جديد اخبار الجمعية</h1>
+    
+    <!-- خط من اليمين مع دائرة -->
+    <div class="line-with-circle"></div>
+  </div>
+ </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+
+      <div class="col">
+          <div class="card">
+              <img src="img/nn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">حفل تكريم أعضاء الجمعية</h5>
+                                 <p class="card-text">حفل تكريم أعضاء الجمعية حفل تكريم الأعضاء السنوي، بمناسبة دعمهم المستمر لكافة برامج الجمعية، سائلين الله أن يجعل مساهمتهم.</p>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                    <span style="color:#aaa;">15-12-2024</span>
+                       <a href="view_details.html" class="btn btn-primary">قراءة المزيد</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="img/nn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">حفل تكريم أعضاء الجمعية</h5>
+                                 <p class="card-text">حفل تكريم أعضاء الجمعية حفل تكريم الأعضاء السنوي، بمناسبة دعمهم المستمر لكافة برامج الجمعية، سائلين الله أن يجعل مساهمتهم.</p>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                    <span style="color:#aaa;">15-12-2024</span>
+                         <a href="view_details.html" class="btn btn-primary">قراءة المزيد</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="img/nn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">حفل تكريم أعضاء الجمعية</h5>
+                                 <p class="card-text">حفل تكريم أعضاء الجمعية حفل تكريم الأعضاء السنوي، بمناسبة دعمهم المستمر لكافة برامج الجمعية، سائلين الله أن يجعل مساهمتهم.</p>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                    <span style="color:#aaa;">15-12-2024</span>
+                         <a href="view_details.html" class="btn btn-primary">قراءة المزيد</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="img/nn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">حفل تكريم أعضاء الجمعية</h5>
+                                 <p class="card-text">حفل تكريم أعضاء الجمعية حفل تكريم الأعضاء السنوي، بمناسبة دعمهم المستمر لكافة برامج الجمعية، سائلين الله أن يجعل مساهمتهم.</p>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                    <span style="color:#aaa;">15-12-2024</span>
+                         <a href="view_details.html" class="btn btn-primary">قراءة المزيد</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="img/nn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">حفل تكريم أعضاء الجمعية</h5>
+                                 <p class="card-text">حفل تكريم أعضاء الجمعية حفل تكريم الأعضاء السنوي، بمناسبة دعمهم المستمر لكافة برامج الجمعية، سائلين الله أن يجعل مساهمتهم.</p>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                    <span style="color:#aaa;">15-12-2024</span>
+                         <a href="view_details.html" class="btn btn-primary">قراءة المزيد</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="img/nn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">حفل تكريم أعضاء الجمعية</h5>
+                                 <p class="card-text">حفل تكريم أعضاء الجمعية حفل تكريم الأعضاء السنوي، بمناسبة دعمهم المستمر لكافة برامج الجمعية، سائلين الله أن يجعل مساهمتهم.</p>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                    <span style="color:#aaa;">15-12-2024</span>
+                         <a href="view_details.html" class="btn btn-primary">قراءة المزيد</a>
+              </div>
+          </div>
+      </div>
+      <div class="text-end p-3">
+        <a href="view_all.html" class="btn btn-primary">عرض المزيد</a>
+        </div>
+  </div>
+</div>
+</section>
+<!--activity-dept ends -->
+
+<!-- services section Starts -->
+<section dir="rtl">
+  <div class="btn-services-scroll p-2">
+    <a href="#ff" class="btn_ser active" onclick="open_ser(event, 'flem')">فلم تعريفي عن جمعية ود</a>
+    <a href="#ii" class="btn_ser" onclick="open_ser(event,'img_new')">جديد الصور</a>
+    <a href="#tt" class="btn_ser" onclick="open_ser(event,'t_twitter')">تغريدات جمعية ود على تويتر</a>
+    <a href="#tt" class="btn_ser" onclick="open_ser(event,'t_suport')">نستقبل دعمكم على</a>
+</div>
+
+
+
+  <div class="row row-cols-1 g-4 py-5 services-main" id="flem" style="display:block;">
+    <div class="col-12" style="width:500px;">
+        <div class="card">
+            <!-- تضمين فيديو YouTube -->
+            <div class="embed-responsive" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width:100%; background: #000;">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row row-cols-1 g-4 py-5 services-main" id="img_new">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- سيتم إضافة الصور هنا باستخدام JavaScript -->
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+
+      <div class="col work-item">
+        <div class="card">
+          <img src="img/nn.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this)">
+      </div>
+      </div>
+  </div>
+
+  <!-- Pagination Controls -->
+  <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+          <li class="page-item" id="prev-page">
+              <button class="page-link">Previous</button>
+          </li>
+          <!-- سيتم إضافة أزرار الصفحات هنا باستخدام JavaScript -->
+          <li class="page-item" id="next-page">
+              <button class="page-link">Next</button>
+          </li>
+      </ul>
+  </nav>
+
+  <!-- Modal to show the image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="imageModalLabel">عرض الصورة</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img id="modal-image" class="img-fluid" src="" alt="عرض الصورة الأكبر">
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 py-5 services-main" id="t_twitter">
+  <!-- تغريدة تويتر أولى -->
+  <div class="col">
+    <div class="card">
+      <!-- تضمين تغريدة تويتر -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Just setting up my twttr</p>&mdash; Jack (@jack) 
+        <a href="https://twitter.com/jack/status/20?ref_src=twsrc%5Etfw">March 21, 2006</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+
+  <!-- تغريدة تويتر ثانية -->
+  <div class="col">
+    <div class="card">
+      <!-- تضمين تغريدة تويتر -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Just setting up my twttr</p>&mdash; Jack (@jack) 
+        <a href="https://twitter.com/jack/status/20?ref_src=twsrc%5Etfw">March 21, 2006</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+
+  <!-- تغريدة تويتر ثالثة -->
+  <div class="col">
+    <div class="card">
+      <!-- تضمين تغريدة تويتر -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Just setting up my twttr</p>&mdash; Jack (@jack) 
+        <a href="https://twitter.com/jack/status/20?ref_src=twsrc%5Etfw">March 21, 2006</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 py-5 services-main" id="t_suport">
+  <div class="col w-100">
+  <button class="collapsible">حسابات الجمعية</button>
+  <div class="content" style="display:block;">
+  <p>
+  البيانات المطلوبة
+  </p>
+  </div>
+  
+  <button class="collapsible">موقع جمعية ود الخيرية الإلكتروني لجمع التبرعات</button>
+  <div class="content">
+  <p>
+    البيانات المطلوبة
+  </p>
+  </p>
+  </div>
+  
+  <button class="collapsible">الدعم عن طريق SMS</button>
+  <div class="content">
+  <p>
+    البيانات المطلوبة
+  </p>
+  <a href="<?php echo $selectedItem->$dep_name->path;?>
+  ">الانتقال الى الخدمة</a>
+  </div>
+  </div>
+</div>
+  </section>
+  <!-- services section Ends -->
+  
+<!-- activity-dept strats -->
+<section dir="rtl">
+  <div class="container py-5">
+    <div class="d-flex align-items-center mb-4 justify-content-center">
+      <!-- خط من اليسار مع دائرة -->
+      <div class="line-with-circle"></div>
+  
+      
+      <!-- خط من اليمين مع دائرة -->
+      <div class="line-with-circle"></div>
+    </div>
+   </div>
+<!--خدمات الارشاد-->
+<div class="row p-4">
+  <div class="col-12 col-md-6 col-lg-3 col-sm-4">
+    <div class="card text-center border-0 shadow rounded-0 p-2 my-3 mx-auto">
+      <div class="icon">
+      <span style="font-weight:700;font-size:20px;color: #3A6B92;">50</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">عدد المستفيدين</h5>
+      </div>
+    </div>
+    </div>
+  
+  <div class="col-12 col-md-6 col-lg-3 col-sm-4">
+    <div class="card text-center border-0 shadow rounded-0 p-2 my-3 mx-auto">
+      <div class="icon">
+      <span style="font-weight:700;font-size:20px;color: #3A6B92;">50</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">عدد الموظفين</h5>
+      </div>
+    </div>
+    </div>
+  
+  
+    <div class="col-12 col-md-6 col-lg-3 col-sm-4">
+      <div class="card text-center border-0 shadow rounded-0 p-2 my-3 mx-auto">
+        <div class="icon">
+        <span style="font-weight:700;font-size:20px;color: #3A6B92;">50</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">عدد الداعمين</h5>
+        </div>
+      </div>
+      </div>
+  
+      <div class="col-12 col-md-6 col-lg-3 col-sm-4">
+        <div class="card text-center border-0 shadow rounded-0 p-2 my-3 mx-auto">
+          <div class="icon">
+          <span style="font-weight:700;font-size:20px;color: #3A6B92;">50</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">عدد البرامج والأنشطة</h5>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 col-sm-4">
+          <div class="card text-center border-0 shadow rounded-0 p-2 my-3 mx-auto">
+            <div class="icon">
+            <span style="font-weight:700;font-size:20px;color: #3A6B92;">50</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">زيارات الموقع</h5>
+            </div>
+          </div>
+          </div>
+  </div>
+  <!--نهاية خدمات الارشاد-->
+</section>
+<!--activity-dept ends -->
+
+  
+ <!-- news strats -->
+<section class="blog">
+  <div class="container py-5">
+    <div class="d-flex align-items-center mb-4 justify-content-center">
+      <!-- خط من اليسار مع دائرة -->
+      <div class="line-with-circle"></div>
+  
+      <h1 class="text-center mx-4">الشركاء والداعمين</h1>
+      
+      <!-- خط من اليمين مع دائرة -->
+      <div class="line-with-circle"></div>
+    </div>
+   </div>
+ <!--section-title starts-->
+<div class="main">
+<div class="container swiper">
+<div class="slider-wrapper">
+<div class="card-list swiper-wrapper">
+  
+  
+  
+<div class="swiper-slide card p-4" data-aos="fade-up" style="height:200px;">
+<img src="img/sp5.png" alt="" class="card-img-top">
+</div>
+  
+  
+<div class="swiper-slide card p-4" data-aos="fade-up" style="height:200px;">
+  <img src="img/sp5.png" alt="" class="card-img-top">
+  </div>
+  
+  
+  
+  <div class="swiper-slide card p-4" data-aos="fade-up" style="height:200px;">
+    <img src="img/sp5.png" alt="" class="card-img-top">
+    </div>
+  
+  
+  
+    <div class="swiper-slide card p-4" data-aos="fade-up" style="height:200px;">
+      <img src="img/sp5.png" alt="" class="card-img-top">
+      </div>
+    
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-slide-button swiper-button-prev"></div>
+  <div class="swiper-slide-button swiper-button-next"></div>
+  </div>
+  </div>
+  </div>
+</section>
+<!-- news ends -->
+
+
+<!-- footer starts -->
+<footer id="footer" class="p-4 text-center" style="background-color:#DDEB9D;" dir="rtl">
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-4 col-lg-6 col-sm-4">
+<h5 class="text-white">من نحن؟</h5>
+<p class="text-white">جمعية ود الخيرية</p>
+<p class="text-white">The Wud Charitable Association</p>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3 col-sm-4">
+  <h5 class="text-white">اتصل بنا</h5>
+  <p class="text-white">The Wud Charitable Association</p>
+<p class="socials">
+<i class="bi bi-twitter text-white mx-1"></i>
+<i class="bi bi-facebook text-white mx-1"></i>
+<i class="bi bi-linkedin text-white mx-1"></i>
+<i class="bi bi-instagram text-white mx-1"></i>
+</p>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-3 col-sm-4">
+    <h5 class="text-white">موقعنا</h5>
+    <p class="text-white">the location</p>
+    </div>
+</div>
+<hr class="text-white">
+<div class="row">
+  <div>
+  <p class="text-white">Devloper by@The Wud Charitable Association</p>
+  </div>
+</div>
+</footer>
+<!-- footer ends -->
+
+
+
+
+
+
+
+
+    
+    
+    <!-- All Js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  // عند الضغط على أي صورة
+function showModal(imgElement) {
+    var modalImage = document.getElementById('modal-image');
+    modalImage.src = imgElement.src; // تعيين مصدر الصورة في المودال إلى نفس مصدر الصورة التي تم النقر عليها
+}
+
+</script>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+    // الحصول على جميع الصور (أو العناصر)
+    const works = document.querySelectorAll("#img_new .work-item");
+    const worksPerPage = 6; // عدد الصور في كل صفحة
+    const totalPages = Math.ceil(works.length / worksPerPage); // إجمالي الصفحات
+    let currentPage = 1; // الصفحة الحالية
+
+    // وظيفة لتحديث عرض الصور حسب الصفحة
+    function updateWorksDisplay() {
+        // إخفاء جميع الصور
+        works.forEach(work => work.style.display = "none");
+
+        // إظهار الصور الخاصة بالصفحة الحالية
+        const startIndex = (currentPage - 1) * worksPerPage;
+        const endIndex = startIndex + worksPerPage;
+        for (let i = startIndex; i < endIndex; i++) {
+            if (works[i]) {
+                works[i].style.display = "block";
+            }
+        }
+
+        // تحديث أزرار التنقل (Pagination)
+        for (let i = 1; i <= totalPages; i++) {
+            const pageItem = document.getElementById("page-" + i);
+            if (i === currentPage) {
+                pageItem.classList.add("active");
+            } else {
+                pageItem.classList.remove("active");
+            }
+        }
+
+        // تمكين أو تعطيل الأزرار حسب الصفحة الحالية
+        document.getElementById("prev-page").classList.toggle("disabled", currentPage === 1);
+        document.getElementById("next-page").classList.toggle("disabled", currentPage === totalPages);
+    }
+
+    // وظيفة للتعامل مع تغيير الصفحة
+    function handlePageChange(page) {
+        if (page < 1 || page > totalPages) return;
+        currentPage = page;
+        updateWorksDisplay();
+    }
+
+    // إضافة مستمعين للأحداث على أزرار التنقل (Previous و Next)
+    document.getElementById("prev-page").addEventListener("click", function() {
+        handlePageChange(currentPage - 1);
+    });
+
+    document.getElementById("next-page").addEventListener("click", function() {
+        handlePageChange(currentPage + 1);
+    });
+
+    // إضافة مستمعين للأحداث على أزرار الصفحات (أرقام الصفحات)
+    for (let i = 1; i <= totalPages; i++) {
+        let pageItem = document.createElement('li');
+        pageItem.classList.add('page-item');
+        pageItem.id = 'page-' + i;
+
+        let pageLink = document.createElement('button');
+        pageLink.classList.add('page-link');
+        pageLink.innerText = i;
+        pageLink.addEventListener('click', function() {
+            handlePageChange(i);
+        });
+
+        pageItem.appendChild(pageLink);
+        document.querySelector('.pagination').insertBefore(pageItem, document.getElementById("next-page"));
+    }
+
+    // Initialize the display when the page loads
+    updateWorksDisplay();
+});
+</script>
+  <script>
+    // عند الضغط على زر البحث
+    document.getElementById("searchButton").addEventListener("click", function() {
+      var searchContainer = document.getElementById("searchContainer");
+      // تغيير وضع الإظهار/الإخفاء
+      if (searchContainer.style.display === "none") {
+        searchContainer.style.display = "block";
+      } else {
+        searchContainer.style.display = "none";
+      }
+    });
+  </script>
+  
+  <script>
+    const swiper = new Swiper('.slider-wrapper', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 30,
+    
+      // Pagination bullets
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+      // Responsive breakpoints
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        },
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      }
+    });
+    </script>
+
+
+<script>
+function open_ser(evt, cityName) {
+  var i, tabcontent, tablinks;
+
+  // إخفاء جميع المحتويات
+  tabcontent = document.getElementsByClassName("services-main");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // إزالة الفئة "active" من جميع الأزرار
+  tablinks = document.getElementsByClassName("btn_ser");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  // إظهار المحتوى المرتبط بالزر
+  document.getElementById(cityName).style.display = "flex";
+
+  // إضافة الفئة "active" للزر الذي تم الضغط عليه
+  evt.currentTarget.classList.add("active");
+}
+
+</script>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+   <script>
+    // فتح النافذة المنبثقة تلقائيًا عند تحميل الصفحة
+    window.addEventListener('load', function() {
+        var modal = new bootstrap.Modal(document.getElementById('myModal'));
+        modal.show();
+
+        // عرض محتوى "كلمة رئيسة الجمعية" بشكل افتراضي عند فتح النافذة
+        document.getElementById('content').innerHTML = `
+            <h5>كلمة رئيسة الجمعية</h5>
+            <p>أهلاً وسهلاً بكم في جمعية ود، نحن هنا لخدمة المجتمع ونطمح لتحقيق أفضل أهداف التنمية المستدامة.</p>
+        `;
+    });
+
+    // إضافة محتوى عند الضغط على الأزرار داخل النافذة المنبثقة
+    document.getElementById('btn-main').addEventListener('click', function () {
+        document.getElementById('content').innerHTML = `
+            <h5>كلمة رئيسة الجمعية</h5>
+            <p>أهلاً وسهلاً بكم في جمعية ود، نحن هنا لخدمة المجتمع ونطمح لتحقيق أفضل أهداف التنمية المستدامة.</p>
+        `;
+    });
+
+    document.getElementById('btn-about').addEventListener('click', function () {
+        document.getElementById('content').innerHTML = `
+            <h5>عن الجمعية</h5>
+            <p>جمعية ود هي مؤسسة غير ربحية تهدف إلى تقديم الدعم الاجتماعي والتعليم في مختلف المجالات.</p>
+        `;
+    });
+
+    document.getElementById('btn-message').addEventListener('click', function () {
+        document.getElementById('content').innerHTML = `
+            <h5>الرسالة</h5>
+            <p>رسالتنا هي تحسين الحياة الاجتماعية والتعليمية من خلال البرامج والخدمات المجتمعية المبتكرة.</p>
+        `;
+    });
+
+    document.getElementById('btn-goals').addEventListener('click', function () {
+        document.getElementById('content').innerHTML = `
+            <h5>الأهداف</h5>
+            <ul>
+                <li>تحقيق تنمية مستدامة في المجتمع.</li>
+                <li>تعزيز التعليم والتدريب المهني.</li>
+                <li>تقديم الدعم للأسر المحتاجة.</li>
+            </ul>
+        `;
+    });
+</script>
+</body>
+</html>
+
+
+
+
+<!--for getting the form download the code from download button-->
